@@ -10,6 +10,10 @@ function thisNumber(event){
 
     const thisNumber = document.querySelector("#thisNumber")
 
+    if(thisNumber.value === "") {
+        return
+    }
+
     if(Number(thisNumber.value) == randomNumber ){
         screen1.classList.add("hide")//Adicionando lista de classes
         screen2.classList.remove("hide")// Removendo lista de classes
@@ -35,4 +39,6 @@ function reset(event){
     event.preventDefault()
     screen1.classList.remove("hide")
     screen2.classList.add("hide")
+    window.location.reload();
+    console.log("cliqui")
 }
